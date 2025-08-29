@@ -35,9 +35,9 @@ body {
     transform: translateY(-5px);
 }
 
-/*h1{
-    font-size: var(--tamaño);
-}*/
+h1{
+    color: var(--colortitulo);
+}
 
 .contenedor{
     width: 70%;
@@ -77,13 +77,15 @@ body {
 }
 
 img{
-                width: 100%;
-            height: auto;
+    width: 100%;
+    height: auto;
 }
 
-        .mascara {
-            mask-image: url(img/OwLogo.png);
+.mascara {
+            mask-image: url(https://upload.wikimedia.org/wikipedia/commons/e/e1/Overwatch.svg);
             mask-repeat: no-repeat;
+            mask-size: 70%;
+            mask-position: center;
         }
 
 
