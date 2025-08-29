@@ -1,3 +1,15 @@
+@property --colortitulo{
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #E74C3C;
+}
+
+/*@property --tamaño{
+    syntax: "<length>";
+    inherits: false;
+    initial-value: 50px;
+}*/
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #dad8d7, #ffffff);
@@ -23,6 +35,9 @@ body {
     transform: translateY(-5px);
 }
 
+/*h1{
+    font-size: var(--tamaño);
+}*/
 
 .contenedor{
     width: 70%;
@@ -51,12 +66,30 @@ body {
 }
 
 .contenedor a {
-    color: #E74C3C;
+    color: var(--colorlinks);
     text-decoration: none;
     font-weight: bold;
     transition: color 0.2s;
 }
 
 .contenedor a:hover {
-    color: #C0392B;
+    color: var(--colorlinks);
+}
+
+img{
+                width: 100%;
+            height: auto;
+}
+
+        .mascara {
+            mask-image: url(img/OwLogo.png);
+            mask-repeat: no-repeat;
+        }
+
+
+@media (max-width: 600px){
+    .contenedor{
+        color: black;
+        background-color: #E74C3C;
+    }
 }
