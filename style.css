@@ -1,7 +1,8 @@
+
 @property --colortitulo{
     syntax: "<color>";
     inherits: true;
-    initial-value: #E74C3C;
+    initial-value: #1e81b0;
 }
 
 /*@property --tamaño{
@@ -10,13 +11,54 @@
     initial-value: 50px;
 }*/
 
+@font-face {
+  font-family: "OverwatchFont";
+  src: url("font/big_noodle_titling.ttf") format("truetype");
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #dad8d7, #ffffff);
+    background: linear-gradient(135deg, #cacaca, #ffffff);
     color: #333;
     line-height: 1.6;
     padding: 20px;
 }
+nav {
+            background-color: #fc9c1c;
+            color: aliceblue;
+            padding: 20px;
+            position: sticky;
+            overflow: hidden;
+            top: 0;
+            z-index: 1;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+ 
+        nav ul li{
+            display: inline;
+            margin: 10px;
+        }
+
+        nav ul li a{
+            color: white;
+            font-family: "OverwatchFont", sans-serif;
+            font-size: 30px;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+       nav ul li a:hover{
+            color: #000000;
+            font-family: "OverwatchFont", sans-serif;
+            transform: scale(1.2);
+        }
+ 
 .recuadro{
     width: 70%;
     height: 80%;
@@ -31,12 +73,19 @@ body {
     box-shadow: 0 6px 18px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
 }
+
+.recuadro b{
+    color: #fc9c1c;
+}
+
 .recuadro:hover {
     transform: translateY(-5px);
 }
 
 h1{
     color: var(--colortitulo);
+    font-family: "OverwatchFont", sans-serif;
+    font-size: 40px;
 }
 
 .contenedor{
@@ -45,7 +94,7 @@ h1{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 5%;
+    margin-top: 8%;
     margin-bottom: 5%;
     background: #ffffff;
     padding: 30px;
@@ -60,7 +109,7 @@ h1{
 
 .contenedor h4::before {
     content: "★";
-    color: #4A90E2;
+    color: #1e81b0;
     margin-right: 8px;
     font-size: 1rem;
 }
@@ -89,9 +138,117 @@ img{
         }
 
 
+
+
+.contenedorAnimado{
+    width: 70%;
+    height: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8%;
+    margin-bottom: 5%;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+
+    /* Propiedades de animación */
+    animation-name: cambioColor;             /* Color Animation */
+    animation-duration: 4s;                  /* Duración */
+    animation-delay: 1s;                     /* Delay */
+    animation-timing-function: ease-in-out;  /* Animation-timing-function */
+    animation-direction: alternate;          /* Animation-direction */
+    animation-iteration-count: infinite;     /* Repetición */
+    animation-fill-mode: forwards;           /* Animation-fill-mode */
+}
+
+.contenedorAnimado h1{
+
+    /* Propiedades de animación */
+    animation-name: cambioH1;             /* Color Animation */
+    animation-duration: 4s;                  /* Duración */
+    animation-delay: 1s;                     /* Delay */
+    animation-timing-function: ease-in-out;  /* Animation-timing-function */
+    animation-direction: alternate;          /* Animation-direction */
+    animation-iteration-count: infinite;     /* Repetición */
+    animation-fill-mode: forwards;           /* Animation-fill-mode */
+}
+
+
+
+@keyframes cambioColor {
+    0%   { background-color: rgb(255, 255, 255); transform: rotate(-5deg); color: #000000;}
+    50%  { background-color: rgb(255, 162, 2); transform: rotate(0deg); color: white;}
+    100% { background-color: rgb(37, 104, 250); transform: rotate(5deg); color: white;}
+}
+@keyframes cambioH1 {
+    0%   { color: #1e81b0;}
+    50%  { color: rgb(0, 0, 0);}
+    100% { color: rgb(0, 0, 0);}
+}
+
+
+.padre{
+    font-size: 20px;
+    font-family: "OverwatchFont";
+}
+ 
+.hijo{
+    font-size:2em;
+    color:#fc9c1c;
+}
+.remex{
+    font-size: 2rem;
+    color:#1e81b0;
+}
+.vh{
+    text-align: center;
+    color: black;
+    height: 50vh;
+    background-color:#fc9c1c;
+}
+.vw{
+    text-align: center;
+    color: white;
+    width: 50vw;
+    background-color:#1e81b0;
+}
+ 
 @media (max-width: 600px){
-    .contenedor{
-        color: black;
-        background-color: #E74C3C;
+    nav ul{
+        text-align: center;
     }
+    .contenedor{
+        color: rgb(255, 255, 255);
+        background-color:#1e81b0;
+    }
+
+    h1{
+        color: black;
+    }
+
+    .contenedor h4::before {
+    content: "★";
+    color: white;
+    margin-right: 8px;
+    font-size: 1rem;
+    }
+    
+    .padre{
+        color: #000000;
+    }
+
+.remex{
+    font-size: 2rem;
+    color:#ffffff;
+}
+
+.vw{
+    text-align: center;
+    color: #1e81b0;
+    width: 50vw;
+    background-color:white;
+}
 }
