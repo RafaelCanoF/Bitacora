@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/Logo.ico" >
     <title>Bitacora</title>
+    <!--<link rel="stylesheet" href="reset.css">-->
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="style.css">
+    
 </head>
 
 <body>
@@ -22,6 +26,18 @@
             <li><a href="#9">Tema 9</a></li>
             <li><a href="#10">Tema 10</a></li>
             <li><a href="#ia">Tema IA</a></li>
+            <li><a href="#mapa">Diagrama</a></li>
+            <li><a href="#11">Tema 11</a></li>
+            <li><a href="#12">Tema 12</a></li>
+            <li><a href="#13">Tema 13</a></li>
+            <li><a href="#14">Tema 14</a></li>
+            <li><a href="#15">Tema 15</a></li>
+            <li><a href="#16">Tema 16</a></li>
+            <li><a href="#17">Propuesta</a></li>
+            <li><a href="#18">Parcial 2</a></li>
+            <li><a href="#19">justificación</a></li>
+            <li><a href="#20">Códigos JS</a></li>
+            <li><a href="#21">Tema 17</a></li>
         </ul>
     </nav>
     <div id="recuadro" ></div>
@@ -29,7 +45,7 @@
         <h1>Recuadro de Datos</h1>
         <h3><b>Nombre:</b> Jesús Rafael Cano Flores 248041</h3>
         <h3><b>Grupo:</b> A</h3>
-        <h3><b>Fecha:</b> 10/Sep/2025</h3>
+        <h3><b>Fecha:</b> 24/Oct/2025</h3>
         <h3><b>Materia:</b> Diseño Web HTML5 y CSS3</h3>
     </div>
     <div id="1" ></div>
@@ -233,9 +249,10 @@
 <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGyK1o26hI&#x2F;hQOFaaxfZUdl620N7S907Q&#x2F;view?utm_content=DAGyK1o26hI&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener"></a> 
 </div>
 
+<div id="mapa" ></div>
 <div class="contenedor">
   <h1>Diagrama de Flujo</h1>
-    <img src="img/Diagrama-de-flujo.png" alt="Diagrama de flujo de la página web / Bitácora">
+    <img src="img/Diagrama-de-flujo.png" alt="Diagrama de flujo de la página web">
 </div>
 <div class="contenedor">
   <h1>Página</h1>
@@ -252,6 +269,339 @@
     <img src="img/Codigo7.png" alt="Captura de pantalla del código">
     <img src="img/Codigo8.png" alt="Captura de pantalla del código">
 </div>
-</body>
 
+
+
+<div id="11"></div>
+<div class="contenedor">
+  <h1>Tema 11 - Reset CSS</h1>
+  <h4>¿Qué es?</h4>
+  <p>
+    Un <b>reset CSS</b> elimina los estilos por defecto de los navegadores 
+    (márgenes, paddings, tamaños de texto, etc.), logrando que todos los 
+    elementos comiencen desde una misma base.
+  </p>
+
+  <h4>Ejemplo resumido</h4>
+  <pre><code>* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+</code></pre>
+
+  <p>
+    No se apliqué el reset en esta bitácora, pero es importante conocerlo 
+    porque asegura consistencia visual entre navegadores.
+  </p>
+</div>
+
+<div id="12" ></div>
+<div class="contenedor">
+  <h1>Tema 12 - Clases con espacio</h1>
+  <p>
+    En HTML es posible asignar más de una clase a un mismo elemento escribiendo los nombres separados por un espacio dentro del atributo class. Por ejemplo:
+    <code>class= "contenedor recuadro"</code>
+    Aquí el elemento tiene dos clases: contenedor y recuadro. Esto significa que puede heredar los estilos de ambas al mismo tiempo. Esta práctica resulta útil porque permite reutilizar código CSS, combinando diferentes estilos sin necesidad de crear una clase nueva para cada caso.
+    Por ejemplo, si la clase .contenedor define que el elemento esté centrado en la página y la clase .recuadro agrega un borde y un espaciado interno, al usarlas juntas el elemento tendrá las dos características: será un contenedor centrado y además un recuadro con borde.
+    En conclusión, asignar múltiples clases a un mismo elemento es una forma de organizar y optimizar los estilos en un proyecto web, ya que favorece la flexibilidad y la composición visual de los elementos.
+    </p>
+</div>
+
+<div id="13"></div>
+<div class="contenedor">
+  <h1>Tema 13 - Código Mobile</h1>
+  <p>
+    En este tema apliqué el enfoque <b>mobile first</b>, es decir, diseñar primero para 
+    pantallas pequeñas (celular) y luego usar <b>media queries</b> para adaptar el diseño 
+    a tablets y computadoras.
+  </p>
+
+  <p>
+    De esta forma, la página comienza siendo ligera y funcional en móviles, y después se 
+    amplía con más espacio y mejores proporciones en pantallas grandes.
+  </p>
+
+  <pre><code>/* Base = Celular */
+body { font-size: 0.9rem; }
+
+/* Tablet */
+@media (min-width: 768px) {
+  body { font-size: 1rem; }
+}
+
+/* PC */
+@media (min-width: 1024px) {
+  body { font-size: 1.1rem; }
+}
+</code></pre>
+
+  <p>
+    Con este enfoque aseguré que la bitácora sea <b>responsiva</b>, 
+    adaptándose de manera ordenada según el dispositivo.
+  </p>
+</div>
+
+<div id="14"></div>
+<div class="contenedor splash">
+  <img src="img/Bg1.jpg" class="capa1" alt="Fondo"> 
+  <img src="img/Bg.png" class="capa2" alt="Luna"> 
+  <img src="img/Bg1.png" class="capa3" alt="Nubes"> 
+  <img src="img/Bg2.png" class="capa4" alt="Edificios"> 
+  <img src="img/Bg4.png" class="capa5" alt="Árboles"> 
+  <img src="img/Moira.png" class="capa6" alt="Moira">
+</div>
+
+<div id="15"></div>
+<div class="contenedor">
+  <h1>Tema 15 - Código JavaScript</h1>
+  <script>
+    //Este es un comentario
+    console.log("El Script se está ejecutando");
+    document.write("<h2>Contenido agregado en JS</h2>");
+
+    let nombre;
+    nombre = "Juan Jose David";
+
+    var edad = 32;
+    const CURP = "Ejemplo CURP";
+
+    var entero = 10;
+    var decimal = 3.1416;
+    var suma = entero + decimal;
+
+    //Estructuras de control
+
+    //if
+    var calificaciónDeDamaris = 10;
+    if (calificaciónDeDamaris >= 10){
+        console.log("Aprobada")
+    }
+    else{
+        console.log("Reprobada")
+    }
+
+
+    //Switch
+    var OrbeLanzadoMoira = "Daño";
+    switch(OrbeLanzadoMoira) {
+        case "Curacion":
+            console.log("Se lanzó un orbe de curación");
+        break;
+        case "Daño":
+            console.log("Se lanzó un orbe de daño");
+        break;
+        default:
+            console.log("No se lanzó ningún orbe");
+        break;
+    }
+
+
+    //For
+    for(i=1;i<=5;i++){
+        console.log("Recibiste "+i+" puntos de daño");
+    }
+
+
+    //While
+    var cargaUlti = 95;
+    while(cargaUlti < 100){
+        console.log("Tu Ultimate aún no está lista ("+cargaUlti+"%)");
+        cargaUlti++;
+    }
+
+
+    //Do-While
+    var vidaEscudo = 5;
+    do{
+        console.log("Tu escudo tiene "+vidaEscudo+" de vida");
+        vidaEscudo--;
+    }
+    while (vidaEscudo > 0);
+    
+  </script>
+  <img src="img/Js.png" alt="JS Resultado"> 
+  <p>El código JavaScript mostrado realiza varias operaciones básicas para practicar el uso de variables, estructuras de control y ciclos. Primero, se utiliza console.log() para enviar mensajes a la consola y document.write() para agregar contenido directamente a la página web. Luego se declaran variables con let, var y const para demostrar sus diferentes formas de uso. Posteriormente, se aplican estructuras de control como if y switch para evaluar condiciones, mostrando diferentes resultados según el valor de las variables. Finalmente, se implementan tres tipos de bucles: for, while y do-while, que repiten acciones de manera controlada. En conjunto, este script sirve como una introducción práctica a los fundamentos de la programación en JavaScript dentro de un entorno HTML.</p>
+  <img src="img/JS2.jpg" alt="JS Código"> 
+</div>
+<div id="16"></div>
+<div class="contenedor">
+  <h1>Tema 16 - Normalizer</h1>
+  <p>El archivo normalize.css es una hoja de estilos que se utiliza para hacer que los elementos HTML se vean y se comporten de forma más consistente en todos los navegadores. A diferencia del “reset.css”, que elimina por completo los estilos por defecto del navegador, normalize.css los ajusta y corrige solo cuando es necesario, manteniendo aquellos valores útiles que mejoran la accesibilidad y la legibilidad. De esta manera, proporciona una base más estable y uniforme para comenzar a diseñar un sitio web, evitando diferencias visuales entre navegadores como Chrome, Firefox o Edge y facilitando el trabajo del desarrollador en la etapa inicial del diseño.</p>
+  <img src="img/Normalizer.png" alt="SS Normalizer"> 
+</div>
+<div id="17"></div>
+<div class="contenedor">
+  <h1>Vista PC</h1>
+    <img src="img/Uacj Pc.jpg" alt="Vista PC propuesta">
+<div class="vistas">
+  <div class="vista">
+    <h2>Vista Tablet</h2>
+    <img src="img/Uacj Tablet.jpg" alt="Vista Tablet propuesta">
+  </div>
+
+  <div class="vista">
+    <h2>Vista Cel</h2>
+    <img src="img/Uacj cel.jpg" alt="Vista Cel propuesta">
+  </div>
+</div>
+</div>
+<div id="18"></div>
+<div class="contenedor parcial">
+  <h1>Parcial 2 - Links</h1>
+  <h3>Página funcional Novelandia</h3>
+  <a href="https://rafaelcanof.github.io/Novelandia/?nombre=&correo=&mensaje=fdgf#inicio" target="_blank">Link-Novelandia</a>
+  <h3>Presentación que usamos para presentar</h3>
+  <a href="https://alumnosuacj-my.sharepoint.com/:p:/g/personal/al248041_alumnos_uacj_mx/Ec09BJuaElZEl45BOGbpedQBF6imAc8xCr9Vhiz8W5HR6A?e=AkCCdu" target="_blank">Link-Powerpoint</a>
+    <h3>Presentación de la página</h3>
+<div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https://www.canva.com/design/DAG1sRoyC4s/BJnUdHEW3ZKDZfS6NFeZNg/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+</div>
+<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAG1sRoyC4s&#x2F;BJnUdHEW3ZKDZfS6NFeZNg&#x2F;view?utm_content=DAG1sRoyC4s&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">PROYECTO PARCIAL 2</a>
+</div>
+<div id="19"></div>
+<div class="contenedor">
+  <h1>Justificación de colores y fuentes</h1>
+  <div>
+      <div class="subtitle">Colores elegidos:</div>
+      <p>Morado: simboliza magia, misterio y resolución de problemas. Naranja: transmite atención y comodidad.</p>
+    </div>
+
+    <div>
+      <div class="subtitle">Empresas de competencia:</div>
+      <p>Magics, Cuevana y Dramabox.</p>
+    </div>
+
+    <div>
+      <div class="subtitle">Tipografía escogida:</div>
+      <p>Libre Baskerville para títulos — elegida para aportar elegancia y autoridad visual, creando contraste con las otras tipografías (Lora y Merriweather). Es legible en pantallas y apropiada para un enfoque cinematográfico, lo cual encaja con la temática de novelas del sitio.</p>
+    </div>
+
+    <div>
+      <div class="subtitle">Por qué elegirnos en lugar de Cuevana, Dramabox y Magics:</div>
+      <p>Nuestra plataforma ofrece series exclusivas con tramas de mayor calidad (hasta 10 veces mejores, según la propuesta), y evita las ventanas emergentes y anuncios sugestivos comunes en otras páginas.</p>
+    </div>
+</div>
+<div id="20"></div>
+<div class="contenedor">
+  <h1>Códigos JavaScript</h1>
+
+  <h2>1. Funciones</h2>
+  <pre><code>
+function saludar() {
+  console.log("¡Hola, bienvenido a JavaScript!");
+}
+
+saludar(); // Llamada a la función
+  </code></pre>
+<p>Imprime la función saludar</p>
+  <h2>2. Funciones que retornan valores</h2>
+  <pre><code>
+function sumar(a, b) {
+  return a + b; // Retorna el resultado de la suma
+}
+
+let resultado = sumar(5, 3);
+console.log("El resultado es: " + resultado);
+  </code></pre>
+<p>Retorna el valor de la suma de a + b</p>
+  <h2>3. Llamada a una función</h2>
+  <pre><code>
+function mostrarMensaje(nombre) {
+  console.log("Hola " + nombre + ", ¡bienvenido!");
+}
+
+// Llamamos a la función pasando un argumento
+mostrarMensaje("Rafael");
+  </code></pre>
+<p>llama a una función ya compuesta de un mensaje y solo se envía el nombre</p>
+  <h2>4. Imprimir en consola el resultado de una función</h2>
+  <pre><code>
+function multiplicar(x, y) {
+  return x * y;
+}
+
+console.log("El producto es: " + multiplicar(4, 6));
+  </code></pre>
+<p>Imprime en la consola el resultado de la función al momento de llamarla</p>
+  <h2>5. getElementById</h2>
+  <pre><code>
+&lt;p id="mensaje"&gt;Texto original&lt;/p&gt;
+&lt;button onclick="cambiarTexto()"&gt;Cambiar texto&lt;/button&gt;
+
+&lt;script&gt;
+function cambiarTexto() {
+  document.getElementById("mensaje").textContent = "¡El texto ha cambiado!";
+}
+&lt;/script&gt;
+  </code></pre>
+<p>Llama al elemento para editarlo por medio de su id o nombre</p>
+  <h2>6. addEventListener</h2>
+  <pre><code>
+&lt;button id="boton"&gt;Haz clic aquí&lt;/button&gt;
+
+&lt;script&gt;
+document.getElementById("boton").addEventListener("click", function() {
+  alert("¡Has hecho clic en el botón!");
+});
+&lt;/script&gt;
+  </code></pre>
+  <p>Crea una alerta, es un evento de JavaScript</p>
+</div>
+<div id="21"></div>
+<div class="contenedor-parallax">
+<h1>Tema 17 - Parallax</h1>
+<div id="parallax-container">
+   <div id="layer1"> <img src="img/Bg1.jpg" class="capa1" alt="Fondo"> </div>
+  <div id="layer2"><img src="img/Bg.png" class="capa2" alt="Luna"> </div>
+  <div id="layer3"><img src="img/Bg1.png" class="capa3" alt="Nubes"> </div>
+  <div id="layer4"><img src="img/Bg2.png" class="capa4" alt="Edificios"> </div>
+  <div id="layer5"><img src="img/Bg4.png" class="capa5" alt="Árboles"> </div>
+  <div id="layer6"><img src="img/Moira.png" class="capa6" alt="Moira"></div>
+    </div>
+ 
+ <section class="contenido">
+        <h2>Este es un Parallax</h2>
+        <p>Tiene 6 capas y se mueven a distintas velocidades</p>
+    </section>
+</div>
+</body>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+            const layer1 = document.getElementById('layer1');
+            const layer2 = document.getElementById('layer2');
+            const layer3 = document.getElementById('layer3');
+            const layer4 = document.getElementById('layer4');
+            const layer5 = document.getElementById('layer5');
+            const layer6 = document.getElementById('layer6');
+            const container = document.getElementById('parallax-container');
+            const speed1 = 0.1; // El fondo se mueve más rápido
+            const speed2 = 0.2; // El frente se mueve más lento
+            const speed3 = 0.25; // El fondo se mueve más rápido
+            const speed4 = 0.4; // El frente se mueve más lento
+            const speed5 = 0.15; // El fondo se mueve más rápido
+            const speed6 = 0.6; // El frente se mueve más lento
+ 
+            function updateParallax() {
+                const scrollOffset = container.getBoundingClientRect().top;
+                layer1.style.transform = `translate3d(0, ${scrollOffset * speed1}px, 0)`;
+ 
+                // La capa media (Layer 2) se desplaza menos
+                layer2.style.transform = `translate3d(0, ${scrollOffset * speed2}px, 0)`;
+                layer3.style.transform = `translate3d(0, ${scrollOffset * speed3}px, 0)`;
+                layer4.style.transform = `translate3d(0, ${scrollOffset * speed4}px, 0)`;
+                layer5.style.transform = `translate3d(0, ${scrollOffset * speed5}px, 0)`;
+                layer6.style.transform = `translate3d(0, ${scrollOffset * speed6}px, 0)`;
+            }
+ 
+            window.addEventListener('scroll', updateParallax);
+ 
+            updateParallax();
+        });
+ 
+</script>
 </html>
